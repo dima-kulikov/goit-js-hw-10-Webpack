@@ -7,9 +7,9 @@ class Timer{
     this.value = intialValue;
     this.step = step;
     this.refs={
-    decBtn:document.querySelector('button[data-action="decrement"]'),
-    incBtn:document.querySelector('button[data-action="increment"]'),
-    clockface: element.querySelector('div.value'),
+        decBtn:element.querySelector('button[data-action="decrement"]'),
+        incBtn:element.querySelector('button[data-action="increment"]'),
+        clockface: element.querySelector('div.value'),
     };
     console.log(this.refs);
     this.updateclockface()
@@ -49,5 +49,11 @@ new Timer({
 new Timer({
     element: document.querySelector('#timer-2'),
     step: 1,
+});
+
+new Timer({
+    element: document.querySelector('#timer-3'),
+    step: 10,
+    intialValue: 10,
 });
 //не находит, колько первый 2 раза
