@@ -56,4 +56,21 @@ new Timer({
     step: 10,
     intialValue: 10,
 });
-//не находит, колько первый 2 раза
+
+
+//
+
+const instance = basicLightbox.create(`
+	<h1>ШАБЛОНИЗАТОР ГОТОВЫЙ</h1>
+	<p>You can set the content of the lightbox with JS.</p>
+    <img src="https://st2.depositphotos.com/1000647/5589/i/600/depositphotos_55895051-stock-photo-biker-girl-riding-on-a.jpg" alt="moto">
+    
+`)
+
+let pp = document.getElementById('pp');
+
+pp.addEventListener('click',()=>{
+    instance.show()
+});
+
+// https://www.youtube.com/watch?v=wfLMQRrak7U&t=1265s
