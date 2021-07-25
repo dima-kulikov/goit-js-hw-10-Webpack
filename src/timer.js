@@ -1,8 +1,17 @@
 import * as basiclightbox from 'basiclightbox';
 import 'basiclightbox/dist/basiclightbox.min.css';
 
+// для фоток
+import Siema from 'siema';
+
+// notyf 
+import {Notyf} from 'notyf';
+import 'notyf/notyf.min.css';
+
 import './sass/main.scss';
 import './sass/_example.scss';
+
+
 
 
 class Timer{
@@ -62,18 +71,58 @@ new Timer({
 
 
 //галерея
-
-const instance = basiclightbox.create(`
-	<h1>ШАБЛОНИЗАТОР ГОТОВЫЙ</h1>
-	<p>You can set the content of the lightbox with JS.</p>
-    <img src="https://st2.depositphotos.com/1000647/5589/i/600/depositphotos_55895051-stock-photo-biker-girl-riding-on-a.jpg" alt="moto">
+// вариант подключения - 1
+// const instance = basiclightbox.create(`
+// 	<h1>ШАБЛОНИЗАТОР ГОТОВЫЙ</h1>
+// 	<p>You can set the content of the lightbox with JS.</p>
+//     <img src="https://st2.depositphotos.com/1000647/5589/i/600/depositphotos_55895051-stock-photo-biker-girl-riding-on-a.jpg" alt="moto">
     
-`)
+// `)
 
+// вариант подключения - 2
+const instance = basiclightbox.create(document.querySelector('#modal'));
+
+// работа кнопки
 let pp = document.getElementById('pp');
 
 pp.addEventListener('click',()=>{
     instance.show()
 });
+
+
+
+const mySiema = new Siema();
+document.querySelector('.prev').addEventListener('click', () => mySiema.prev());
+document.querySelector('.next').addEventListener('click', () => mySiema.next());
+new Siema();
+
+
+
+// var notyf = new Notyf();
+
+// Create an instance of Notyf
+var notyf = new Notyf();
+
+// Display an error notification
+// notyf.error('НЕ ВЫШЛО');
+
+// Display a success notification
+// notyf.success('ВСЕ НОРМАС');
+
+let net = document.getElementById('net');
+net.addEventListener('click',()=>{
+    notyf.error('НЕ ВЫШЛО');
+});
+
+let da = document.getElementById('da');
+da.addEventListener('click',()=>{
+    notyf.success('ВСЕ НОРМАС');
+});
+
+
+
+
+
+
 
 // https://www.youtube.com/watch?v=wfLMQRrak7U&t=1265s
