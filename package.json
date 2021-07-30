@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "basiclightbox": "^5.0.4",
+    "handlebars": "^4.7.7",
     "notyf": "^3.10.0",
     "siema": "^1.5.1"
   }

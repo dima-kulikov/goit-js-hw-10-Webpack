@@ -1,0 +1,28 @@
+
+.blog{
+    max-width: 1150px;
+    margin: 0px auto;
+    outline: 2px solid red;
+    box-sizing: border-box;
+}
+.review{
+    width: 90%;
+    margin: 20px auto;
+    box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+}
+.review__name{
+    text-align: center;
+    font-size: 26px;
+}
+.review__img{
+    width: 300px;
+
+}
+.review .flex{
+    display: flex;
+    align-items: center; 
+}
+.description{
+    width: 80%;
+    padding: 15px;
+}
