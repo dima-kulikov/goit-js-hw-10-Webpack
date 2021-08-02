@@ -10,7 +10,7 @@ import 'notyf/notyf.min.css';
 
 import './sass/main.scss';
 import './sass/_example.scss';
-
+console.log("data");
 
 
 
@@ -118,11 +118,3 @@ let da = document.getElementById('da');
 da.addEventListener('click',()=>{
     notyf.success('ВСЕ НОРМАС');
 });
-
-
-
-
-
-
-
-// https://www.youtube.com/watch?v=wfLMQRrak7U&t=1265s
