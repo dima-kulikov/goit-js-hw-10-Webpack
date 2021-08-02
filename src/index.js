@@ -3,10 +3,20 @@
 // import './sass/_example.scss';
 
 
-import data from './data.json';
+import posts from './data.json';
+import postFeedItem from './templates/sample.hbs';
 
 
-console.log(data);
 
-console.log("data");
-console.log('1234567889');
+
+const refs = {
+    postFeed: document.querySelector('.blog'),
+};
+
+
+buildPostFeed(posts);
+
+function buildPostFeed(posts){
+    const markup = posts.map(post => postFeedItem(post)).join('');
+    refs.postFeed.insertAdjacentHTML('beforeend', markup);
+}

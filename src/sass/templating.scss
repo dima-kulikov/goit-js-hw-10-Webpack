@@ -6,23 +6,54 @@
     box-sizing: border-box;
 }
 .review{
-    width: 90%;
+    width: 80%;
     margin: 20px auto;
     box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
+    padding: 10px;
+    
 }
 .review__name{
     text-align: center;
     font-size: 26px;
 }
 .review__img{
-    width: 300px;
+    width: 200px;
+    height: 200px;
+    border: 1px solid black;
+    display: inline-block;
 
 }
 .review .flex{
     display: flex;
-    align-items: center; 
+    // align-items: ;
+    box-sizing: border-box;
+    font-size: 18px;
+}
+.flex-2{
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    margin-left: 15px;
 }
 .description{
     width: 80%;
     padding: 15px;
+    margin-bottom: 20px;
+
+}
+.review__btn{
+    position: absolute;
+    bottom: 0px;
+    border-radius: 15px;
+}
+.review__btn:hover{
+    background-color: gray;
+    
+}
+.review__btn a{
+    text-decoration: none;
+    padding: 5px 15px;
+}
+.review__btn a:hover{
+    color: white;
 }
