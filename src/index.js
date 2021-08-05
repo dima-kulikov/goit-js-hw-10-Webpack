@@ -20,3 +20,16 @@ function buildPostFeed(posts){
     const markup = posts.map(post => postFeedItem(post)).join('');
     refs.postFeed.insertAdjacentHTML('beforeend', markup);
 }
+
+
+// ----работа с JSON, ПРИВЕСТИ К СТРОКЕ ОБЪЕКТ
+
+const dog = {
+    name: 'mango',
+    age: 5,
+    isHappy: true,
+};
+
+const str = JSON.stringify(dog);
+
+console.log(str)
