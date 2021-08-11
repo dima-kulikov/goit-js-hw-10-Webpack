@@ -57,3 +57,17 @@
 .review__btn a:hover{
     color: white;
 }
+
+//-------РАБОТА С ФОРМОЙ, ВКЛАДКА 3
+
+.feedback-form{
+    display: flex;
+    flex-direction: column;
+    width: 600px;
+    padding: 20px;
+}
+.feedback-form textarea {
+    width: 100%;
+    resize: none;
+    font: inherit;
+}
